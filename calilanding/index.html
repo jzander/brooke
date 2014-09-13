@@ -92,19 +92,22 @@
 						<img clas="album" src="images/album.png" alt="album cover">
 					</a>
 				</div>
-				<div class="col-xs-8 pull-left">
+				<div class="col-xs-4 pull-left">
 					<span class="altxt">OPULENCE</span><br /><br />
 					<button class="footbtn" href="#">AVAILABLE NOW</button><br />
 					<button class="footbtn" href="#">MORE OPTIONS</button>
 				</div>
-
-
-		</div>
-		
-		<div class="col-xs-8"></div>
-						
+				<div class="col-xs-4 pull-right">
+					
+				</div>
+			</div>
+	
 	</div>
 
+<div class="volcon">
+	<a href="#" class="soundoff"><i class="fa fa-volume-up fa-2x"></i></a>
+	<a href="#" class="soundon"><i class="fa fa-volume-off fa-2x"></i></a>
+</div>
 
 </footer>
 
@@ -118,6 +121,18 @@
 		$('.bclogotwo').fadeIn('slow');
 
 	});
+
+	$('.soundoff').click(function(){
+			$('#audio-loop')[0].pause()
+			$('.soundoff').hide()
+			$('.soundon').show();
+	});		
+
+	$('.soundon').click(function(){
+			$('#audio-loop')[0].play()
+			$('.soundon').hide()
+			$('.soundoff').show();
+	});	
 
 </script>
 
