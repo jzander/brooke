@@ -32,6 +32,10 @@ body {
 	margin-top: 1em;
 }
 
+.morestuff {
+	margin-left: -1em;
+}
+
 .newsl {
 	border-radius: 4px;
 	background-color: white;
@@ -39,7 +43,7 @@ body {
 	width: 230px;
 	height: 40px;
 	font-family: 'Oswald', sans-serif;
-	border: none;
+	border: 1px dashed white;
 	padding-top: -.3em;
 	-webkit-transition: all 0.7s ease;
  	transition: all 0.7s ease;
@@ -62,8 +66,9 @@ body {
 }
 
 .bclogo {
+	width: 70%;
 	height: auto;
-	margin-top: 23%;
+	margin-top: 27%;
 }
 
 .bclogotwo {
@@ -75,7 +80,7 @@ body {
 }
 
 .oplink {
-	margin-top: -11em;
+	margin-top: -19em;
 }
 
 .newsbtn {
@@ -129,7 +134,7 @@ header {
 .optxt {
 	font-family: 'Oswald', sans-serif;
 	font-weight: 700;
-	font-size: 10em;
+	font-size: 18em;
 	color: rgba(0, 0, 0, .6);
 	-webkit-transition: all 0.7s ease;
   	transition: all 0.7s ease;
