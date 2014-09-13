@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>CALIFORNIA AQUARIUMS</title>
+	<title>BROOKE CANDY OFFICIAL SITE</title>
 	<link rel="stylesheet" href="font-awesome-4.1.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="css/style.css">
 	<link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="scripts/jquery.js"></script>
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.17/angular.js"></script>
 
 	<!--[if lt IE 9]>
@@ -23,56 +23,61 @@
 	<source src="images/brookecandy.mp4" type="video/mp4">
 </video>
 
-<audio autoplay>
+<audio autoplay loop id="audio-loop">
   <source src="images/opulence.ogg" type="audio/ogg">
   <source src="images/opulence.mp3" type="audio/mp3">
   Your browser does not support the audio element.
 </audio>
 
-<header>
-<div class="row">
-<div class="col-md-1">
-	</div>
-	<div class="newsbutton col-md-3">
-			<a class="newsbtn" href="#">
-					<button class="newsl">JOIN THE NEWSLETTER</button>
-				</a>
 
-	</div>
-	<div class="col-md-2">
-	</div>
-	<div class="pull-right social col-md-2">
-	
-				<a href="#">
-					<i class="fa fa-facebook fa-3x"></i>
-				</a>
-
-				<a href="#">
-					<i class="fa fa-twitter fa-3x"></i>
-				</a>
-	</div>
-	<div class="col-md-1"></div>
-	<div class="newsbutton col-md-3">
-	</div>
+<div id="opulence" style="position: fixed; z-index: -99; width: 100%; height: 100%">
+  <iframe frameborder="0" height="100%" width="100%" 
+    src="http://www.youtube.com/embed/CbChHPQhXtM?feature=player_detailpage?autoplay=1&controls=0&showinfo=0&autohide=1">
+  </iframe>
 </div>
+
+<header>
+	<div class="row">
+		<div class="col-xs-4">
+			<img class="bclogotwo" src="images/logo.png" alt="brooke candy logo">
+		</div>
+		<div class="col-xs-1"></div>
+		<div class="social col-xs-3">
+					<a href="#">
+						<i class="fa fa-facebook fa-3x"></i>
+					</a>
+
+					<a href="#">
+						<i class="fa fa-twitter fa-3x"></i>
+					</a>
+		</div>
+		<div class="col-xs-3 newsbutton pull-right">
+						<a class="newsbtn" href="#">
+							<button class="newsl">JOIN THE NEWSLETTER</button>
+						</a>
+		</div>
+		<div class="col-xs-1 pull-right"></div>
+
+	</div>
 </header>
 
 <container>
 
+	<div class="ytlinkhead">
 	
 		<div class="logobc text-center" id="bclogo">
 			<img class="bclogo" src="images/logo.png" alt="brooke candy logo">
 		</div>
 
 		<div class="text-center oplink">
-			<a class="optxt" id="optxt" href="http://www.youtube.com/watch?v=CbChHPQhXtM&feature=player_embedded" target="new">OPULENCE</a> 
+			<a class="optxt" id="optxt" href="#">OPULENCE</a> 
 
 			<br />
 
 
 		</div>
 
-
+</div>
 </container>
 
 <footer class="bcfoot">
@@ -82,16 +87,17 @@
 
 		<span class="col-xs-4 alcover">
 			<div class="row">
-				<div class="col-xs-6">
+				<div class="col-xs-4">
 					<a href="#">
 						<img clas="album" src="images/album.png" alt="album cover">
 					</a>
 				</div>
-				<div class="col-xs-6 pull-left">
+				<div class="col-xs-8 pull-left">
 					<span class="altxt">OPULENCE</span><br /><br />
 					<button class="footbtn" href="#">AVAILABLE NOW</button><br />
 					<button class="footbtn" href="#">MORE OPTIONS</button>
 				</div>
+
 
 		</div>
 		
@@ -99,13 +105,18 @@
 						
 	</div>
 
-				
+
 </footer>
 
 <script type="text/javascript">
-	
-	$('#optxt').mouseover(function(){
-		$('#bclogo').hide();
+
+	$('#optxt').click(function(){
+		$('#video-bg').hide()
+		$('#audio-loop')[0].pause()
+		$('.ytlinkhead').hide()
+		$('#opulence').fadeIn('slow')
+		$('.bclogotwo').fadeIn('slow');
+
 	});
 
 </script>
